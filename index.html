@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKMARK</title>
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+    <div class="container position-relative">
+        <div class="title my-5 ">
+            <h1 class="m-auto w-fit h1">Bookmarker</h1>
+        </div>        
+        <div class="box w-100 px-2 py-3 mt-5 g-4 d-flex fs-4 justify-content-center align-items-center flex-column ">
+            <h2 class=" ">
+                <i class="fa-solid fa-bookmark px-1"></i>
+                Bookmark Your Favourite Site
+                <i class="fa-solid fa-bookmark px-1"></i>
+            </h2>
+            <div class="name w-100 mb-3 d-flex flex-column justify-content-center">
+                <label for="siteName" class="py-2"><i class="fa-solid fa-book-bookmark px-1" ></i> Site Name</label>
+                <input id="siteName" class="form-control" type="text" placeholder="Bookmark Name" oninput="validateName()" required>
+                <div class="alert text-danger pt-2 pb-1 d-none" id="wrongName">
+                     <p class="fs-6">* Please start with a capital char followed by at least 3 small char </p>
+                </div>
+            </div>
+            <div class="name w-100 mb-3 d-flex flex-column justify-content-center">
+                <label for="siteUrl" class="py-2"><i class="fa-solid fa-link px-1"></i> Site URL</label>
+                <input id="siteUrl"   class="form-control " type="url" placeholder="Website URL" oninput="validateURL()" required>
+                <div class="alert text-danger pt-2 pb-1  d-none " id="wrongURL">
+                    <p class="fs-6">* Please enter a valid url starts with "http(s)"</p>
+                </div>
+            </div>
+            <button class="btn btn-submit px-5 mt-2 mb-3" onclick="addLink()">Submit</button>
+        </div>
+
+        <table class="table text-center bg-light mt-4" >
+            <thead>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+            </thead>
+            <tbody id="tablebody">
+                <!-- <tr>
+                    <td></td>
+                <td>
+                    <a href="" target="_blank"></a>
+                </td>
+                <td>
+                    <button class="btn btn-visit " type="button"> <i class="fa-solid fa-eye pe-2"></i> Visit</button>
+                </td>
+                <td>
+                    <button class="btn btn-delete " type="button"> <i class="fa-solid fa-trash-can"></i> Delete</button>
+                </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+   
+
+
+
+
+
+
+
+
+   <script src="./js/bootstrap.bundle.min.js"></script>
+   <script src="./js/style.js"></script> 
+</body>
+</html>
